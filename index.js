@@ -1,12 +1,11 @@
 const updateCounter = (number) => {
     //console.log('funguju'); // vypisuju, zdali je funkce volána
-    const valueElm = document.querySelector('.counter__value');
-    console.log(valueElm); // vypisuju, zdali je správně vybraný prvek
-    valueElm.textContent = String(number).padStart(2, '0');
-    console.log(valueElm.value); // vypisuju hodnotu, která je na prvku
+    valueElm.textContent = number;
+    console.log(valueElm.textContent); // vypisuju hodnotu, která je na prvku
   };
   
-  let value = 0;
+  const valueElm = document.querySelector('.counter__value');
+  let value = String(valueElm.textContent).padStart(2, '0');
   const btnUp = document.querySelector('.counter__up');
   const btnDown = document.querySelector('.counter__down');
   
